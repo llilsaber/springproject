@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="user_information">
+	<insert id="insert" parameterType="userInfoVO">
+		insert into USER_INFORMAION
+		values (#{userid}, #{upw}, #{uname}, #{uaddr}, #{utel}, #{uemail},
+		#{ubirth}, #{ugender})
+	</insert>
+	
+	<select id="loginCk" parameterType="userInfoVO" resultType="userInfoVO">
+		select * from USER_INFORMAION where userid = #{userid} and upw = #{upw}
+	</select>
+	
+	<update id="update" parameterType="userInfoVO">
+		update USER_INFORMAION set
+		uname=#{uname}, uaddr = #{uaddr}, utel = #{utel}, uemail = #{uemail},
+		ubirth = #{ubirth}, ugender = #{ugender} where userid = #{userid} and upw = #{upw}
+	</update>
+	
+</mapper>

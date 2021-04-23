@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<typeAlias type="com.mega.mvcProjectTest.UserInfoVO" alias="userInfoVO"></typeAlias>
+		<typeAlias type="com.mega.mvcProjectTest.ShopVO" alias="shopVO"></typeAlias>
+		<typeAlias type="com.mega.mvcProjectTest.ScommentVO" alias="scommentVO"></typeAlias>
+	</typeAliases>
+	<mappers>
+		<!-- SQL 문이 들어가는 부분 -->
+		<mapper resource="mapper/userInfoMapper.xml" />
+		<mapper resource="mapper/shopMapper.xml" />
+		<mapper resource="mapper/scommentMapper.xml" />
+	</mappers>
+</configuration>
